@@ -66,250 +66,362 @@ nav {
   font-family: "Righteous", cursive;
 }
 
-.api-heading {
-  font-weight: bolder;
-  margin-left: 90px;
-  margin-top: 100px;
-  font-style: bold;
+.api {
+  margin-top: 90px;
+  max-width: 85rem;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.cards {
-  margin-left: 90px;
-  margin-top: 20px;
+.api .api-heading {
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+.api .cards {
   display: flex;
-  flex-direction: row;
+  margin-top: 40px;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
-.card {
-  width: 20%;
-  height: 250px;
-  background-color: transparent;
+.api .cards .card-active {
+  background-color: #ffffff;
   border-radius: 10px;
-  margin-right: 30px;
-  margin-bottom: 30px;
+  padding: 40px 20px;
+  width: 190px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.04);
+  color: #4617fe;
+}
+.api .cards .card {
+  padding: 40px 20px;
+}
+.api .cards [class^="card"] h3 {
+  margin-top: 14px;
+}
+.api .cards [class^="card"] p {
+  color: #000000;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
-.card-active {
-  width: 20%;
-  height: 250px;
-  border-radius: 10px;
-  margin-right: 30px;
-  margin-bottom: 30px;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.card:last-child::after {
+  content: ">";
+  display: flex;
+  background-color: #4617fe;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  right: 20px;
+  top: 80px;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }
-
-.card-logo {
-  margin-left: 30px;
-  margin-top: 30px;
-}
-
-.card-head {
-  color: black;
-  margin-left: 30px;
-}
-
-.card-head-active {
-  color: #5a31fc;
-  margin-left: 30px;
-}
-
-.card-body {
-  color: black;
-  margin-left: 30px;
-  font-size: small;
+@media only screen and (max-width: 925px) {
+  .card:last-child::after {
+    display: none;
+  }
+  .api {
+    padding: 0 20px;
+  }
+  .api .api-heading {
+    font-size: 2.4rem;
+  }
 }
 
 .blog-heading {
-  margin-left: 90px;
+  margin-top: 84px;
+  max-width: 85rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.blog-heading h1 {
+  font-size: 2.8rem;
+}
 .blog-cards {
-  margin-left: 90px;
-  margin-top: 50px;
+  max-width: 85rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  margin-top: 24px;
+  flex-wrap: wrap;
 }
-
 .blog-card {
+  background-color: #ffffff;
+  margin-right: auto;
+  margin-left: auto;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.04);
   height: 288px;
-  width: 40%;
-  background-color: white;
-  border-radius: 70px 10px 10px 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin-right: 50px;
 }
-
-.blog-content {
-  float: right;
-  margin-right: 100px;
-}
-
 .blog-image {
-  float: left;
+  display: inline-block;
 }
-
-.blog-bottom {
-  float: right;
-  margin-right: 100px;
+.blog-image img {
+  display: inline-block;
 }
-
-.blog-card-bottom-image {
-  margin-top: 20px;
+.blog-content {
+  display: inline-block;
+  vertical-align: top;
+  padding: 30px 90px 0px 50px;
 }
-
-.blog-author {
-  font-size: x-small;
-  float: right;
-  margin-top: 16px;
-  margin-right: 8px;
+.blog-content h6 {
+  color: #4617fe;
+  font-weight: 900;
+}
+.blog-content h3 {
+  padding-top: 15px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+.blog-content small {
   font-weight: bold;
 }
-
-.blog-card {
-  float: left;
+.blog-bottom {
+  position: absolute;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  left: 320px;
+  bottom: -20px;
 }
 
-.blog-cards {
-  display: flex;
-  flex-direction: row;
+div.blog-author {
+  position: absolute;
+  bottom: -20px;
+  left: 390px;
+  bottom: 12px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 950px) {
+  .blog-cards {
+    gap: 40px;
+  }
+  .blog-card {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .blog-image {
+    width: 100px;
+  }
+  .blog-image img {
+    width: 100%;
+  }
+  .blog-content {
+    padding: 10px 30px 20px 30px;
+  }
+  .blog-bottom {
+    left: 0px;
+    bottom: -20px;
+  }
+  div.blog-author {
+    left: 0;
+    bottom: -40px;
+  }
+  .blog-heading {
+    padding: 0 20px;
+  }
+  .blog-heading h1 {
+    font-size: 2.2rem;
+  }
 }
 
 .faq-section {
-  height: 325px;
+  margin-top: 124px;
+  padding: 0 90px;
   background-color: #e9edff;
-  margin-top: 50px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  padding-top: 40px;
+  position: relative;
+  height: 350px;
 }
-
-.faq-image {
-  width: 40%;
-  height: 300px;
-  float: right;
+.faq-section .faq-content h2 {
+  font-size: 2.8rem;
 }
-.faq-content {
-  float: left;
-  margin-left: 90px;
+.faq-section .faq-content h4 {
+  font-size: 12px;
+  padding-top: 15px;
 }
-
-.faq-content h2 {
-  font-weight: bolder;
-  font-size: 200%;
+.faq-section .faq-content h2 ~ h4:not(:first-of-type) {
+  font-size: 1rem;
+  padding-top: 34px;
 }
-
-.faq-content button {
-  background: #5a31fc;
-  border-radius: 3px;
-  color: white;
+.faq-section .faq-image {
+  align-self: flex-end;
+  display: flex;
+  position: absolute;
+  right: 0;
+  height: 390px;
+}
+.faq-section .faq-content button {
+  background-color: #5a31fc;
   border: none;
-  padding: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
+  color: #ffffff;
+  padding: 8px 20px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 1256px) {
+  .faq-section .faq-content {
+    position: relative;
+    z-index: 2;
+  }
+  .faq-section .faq-image {
+    opacity: 0.1;
+    z-index: 1;
+  }
+}
+@media only screen and (max-width: 925px) {
+  .faq-section .faq-content h2 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .faq-section {
+    padding: 20px 20px;
+  }
+  .faq-section .faq-content h4 {
+    font-size: 12px;
+    padding-top: 15px;
+  }
+  .faq-section .faq-content h2 ~ h4:not(:first-of-type) {
+    font-size: 1rem;
+    padding-top: 34px;
+  }
 }
 
 .download-section {
-  height: 225px;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.download-content {
-  float: left;
-  margin-left: 90px;
-  margin-top: 50px;
-}
-
-.download-email {
-  float: right;
-  margin-right: 250px;
-  margin-top: 100px;
-}
-
-.download-content h1 {
-  font-size: 300%;
-}
-.download-content span {
-  font-size: 70%;
-}
-
-.download-email {
   display: flex;
-  flex-direction: row;
-  padding-left: 200px;
-  padding-bottom: 60px;
+  justify-content: space-between;
+  padding: 0 90px;
+  height: 300px;
+  background-color: #ffffff;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
-form {
-  display: flex;
-  flex-direction: row;
-  height: 40px;
-  border: 2px solid grey;
-  border-radius: 22px;
-  padding: 2px;
-  background-color: #e9edff;
+.download-section .download-content span {
+  font-weight: 100;
 }
-
-input {
-  flex-grow: 2;
-  border: none;
-  width: 400px;
-  background-color: transparent;
-  text-align: center;
+.download-section .download-email {
+  position: absolute;
+  right: 0px;
 }
-
-input:focus {
+.download-section .download-email form input {
   outline: none;
+  border: none;
+  background-color: #e9edff;
+  padding: 15px 170px 15px 40px;
+  border-radius: 50px;
+  width: 360px;
+}
+.download-section .download-email form input::placeholder {
+  font-weight: 600;
+  color: #505050;
+  font-size: 12px;
+}
+.download-section .download-email form button {
+  position: relative;
+  right: 140px;
+  background-color: #4617fe;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 50px;
 }
 
-button {
-  width: 150px;
-  color: white;
-  border-radius: 20px;
-  border-width: 1px;
-  background-color: #5a31fc;
+@media only screen and (max-width: 1047px) {
+  .download-section .download-email {
+    position: relative;
+  }
+  .download-section {
+    padding: 0 10px;
+  }
+  .download-section .download-email form input {
+    display: block;
+    padding: 15px 10px 15px 10px;
+  }
+  .download-section .download-email form button {
+    display: none;
+  }
 }
 
 .footer-section {
-  height: 225px;
-  background-color: #3c0afe;
-}
-
-.footer-left {
-  float: left;
-}
-
-.footer-logo {
-  margin-top: 50px;
-  padding-left: 90px;
-}
-
-.list {
+  background-color: #481afe;
   display: flex;
-  flex-direction: row;
-  margin-left: 30px;
-  list-style-type: none;
-  color: white;
+  justify-content: space-between;
+  padding: 20px 90px;
+  align-items: center;
+  height: 200px;
+  flex-wrap: wrap;
 }
 
-.logos-list {
+.footer-section .footer-left .list {
+  list-style-type: none;
   display: flex;
-  flex-direction: row;
-  margin-left: 10px;
-  list-style-type: none;
-  color: white;
-  margin-top: 120px;
-  margin-right: -200px;
+  gap: 39px;
+  color: #ffffff;
+  font-weight: lighter;
+  font-size: 13px;
+  padding-top: 20px;
+  margin-left: -40px;
 }
-
-.list-items {
-  margin-left: 25px;
-}
-
-.footer-right {
-  float: right;
-  margin-top: 10px;
-  margin-right: 100px;
-}
-
-.footer-logos {
-  margin-top: 50px;
+.footer-section
+  .footer-left
+  .list
+  .list-items
+  ~ .list-items:not(:last-of-type)::after {
+  content: "";
+  width: 1px;
+  height: 50%;
   margin-left: 20px;
+  display: inline-block;
+  background-color: #ffffff;
+}
+
+.footer-right:first-child {
+  text-align: right;
+  margin-bottom: 20px;
+}
+.footer-right .footer-logos:not(:last-child) {
+  margin-right: 15px;
+}
+.footer-right .logos-list {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  color: #ffffff;
+  font-weight: lighter;
+  font-size: 13px;
+}
+.footer-right .logos-list .list-items:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 50%;
+  margin-left: 20px;
+  display: inline-block;
+  background-color: #ffffff;
+}
+
+@media only screen and (max-width: 670px) {
+  .footer-section .footer-left .list {
+    flex-direction: column;
+  }
+  .footer-section {
+    height: auto;
+    padding: 40px 20px;
+  }
 }
